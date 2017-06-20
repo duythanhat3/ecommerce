@@ -1,29 +1,19 @@
-import React from 'react';
-import {url} from '../../routing';
+import {connect} from 'react-redux';
 import Nav from '../../components/widgets/Nav';
+import fetchNav from '../../commands/nav/fetchNav';
 
-export default class NavWidget extends React.Component {
-    getMenu() {
-        let menu = [{
-            path: '/',
-            label: 'Home',
-            checkingOptions: true,
-        }, {
-            path: url.to('packages.list'),
-            label: 'Packages',
-        }, {
-            path: url.to('users'),
-            label: 'Users',
-        }];
+const mapStateToProps = (state) => {
+    let nav = state.nav.data;
+    return {nav};
+};
 
-        menu.forEach(item => Object.assign(item, {
-            active: url.isCurrent(item.path, item.checkingOptions || {}),
-        }));
+const mapDispatchToProps = (dispatch) => ({});
 
-        return menu;
+const Container = connect(mapStateToProps, mapDispatchToProps)(Nav);
+
+export default class ContainerC extends Container {
+    componentDidMount() {
+        super.componentDidMount();
+        this.store.dispatch(fetchNav());
     }
-
-    render() {
-        return <Nav menu={this.getMenu()} />
-    }
-}
+};

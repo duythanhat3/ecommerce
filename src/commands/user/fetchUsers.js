@@ -1,4 +1,4 @@
-import userApi from '../../services/user/userApi';
+import userApi from '../../services/api/userApi';
 import {setUsers} from '../../redux/actions/users';
 import {fetchingUsersStart, fetchingUsersSuccess, fetchingUsersError} from '../../redux/actions/fetchingUsers';
 
