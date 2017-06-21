@@ -1,11 +1,11 @@
 import axios from 'axios';
-import {FET_MENU_API} from './configs';
+import {FET_HOME_SLIDER} from './configs';
 
 export default {
-    fetchMenu: () => (
+    fetchSlider: () => (
         axios({
             method: 'get',
-            url: FET_MENU_API
+            url: FET_HOME_SLIDER
         })
     ),
 };

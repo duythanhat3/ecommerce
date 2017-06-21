@@ -13,3 +13,6 @@ export const SET_BANNERS = 'SET_BANNERS';
 
 // set nav to nav state
 export const SET_NAV = 'SET_NAV';
+
+// set home to home state
+export const SET_HOME = 'SET_HOME';

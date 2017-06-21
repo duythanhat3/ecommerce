@@ -5,11 +5,9 @@ import fetchBanners from '../../commands/banner/fetchBanners';
 const mapStateToProps = (state) => {
     let title = '';
     let href = '';
-    if(state.banners.data){
+    if (state.banners.data) {
         title = state.banners.data.title;
         href = state.banners.data.link;
-        console.log(title);
-        console.log(href);
     }
 
     return {

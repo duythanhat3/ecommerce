@@ -11,7 +11,8 @@
     "react-scripts": "1.0.7",
     "redux": "^3.6.0",
     "redux-actions": "^2.0.3",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "slick-carousel": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,10 +21,12 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "css-loader": "^0.28.4",
+    "react-alice-carousel": "^1.2.7",
+    "react-slick": "^0.14.11",
     "react-transition-group": "^1.2.0",
     "reactstrap": "^4.6.2",
-    "style-loader": "^0.18.2",
-    "bootstrap": "^4.0.0-alpha.6"
+    "style-loader": "^0.18.2"
   }
 }

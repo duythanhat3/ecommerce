@@ -1,12 +1,11 @@
 import axios from 'axios';
-
-let apiFetchData = 'http://localhost:5000/api/Banners/findOne';
+import {FET_BANNER_API} from './configs';
 
 export default {
     fetch: () => (
         axios({
             method: 'get',
-            url: apiFetchData
+            url: FET_BANNER_API
         })
     ),
 };
